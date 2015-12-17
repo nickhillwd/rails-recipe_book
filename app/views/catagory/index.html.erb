@@ -1,3 +1,13 @@
-<% @catagories.each do |catagory| %>
-  <%= catagory.catagory_name %>
-<% end %>
+<div class="catagory_left">
+  <ul>
+    <li><%= @catagories_names_array.first %></li>
+    <li><%= @catagories_names_array.second %></li>
+  </ul>
+</div>
+
+<div class="catagory_right">
+  <ul>
+    <li><%= @catagories_names_array.third %></li>
+    <li><%= @catagories_names_array[3] %></li>
+  </ul>
+</div>
