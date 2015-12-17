@@ -1,7 +1,8 @@
 class CatagoryController < ApplicationController
 
   def index
-    @Catagories = Catagory.all
+    @catagories = Catagory.all
+    #binding.pry
   end
 
 end
