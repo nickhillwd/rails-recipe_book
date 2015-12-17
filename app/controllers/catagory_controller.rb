@@ -1,7 +1,7 @@
 class CatagoryController < ApplicationController
 
   def index
-    "Controller Index"
+    @Catagories = Catagory.all
   end
 
 end
