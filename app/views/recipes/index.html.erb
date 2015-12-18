@@ -1,15 +1,14 @@
 
-<h1> <%= "#{@catagories_names_array.first}" %> </h1>
+<h1 class = "recipe_headder" > <%= "#{@catagories_names_array.first}" %> </h1>
 
 <div class="recipe_list">
-  <a href=
     <% @recipes.each do |recipe| %>
       <img src="<%= recipe.picture %>">
       <br>
-      <%= recipe.recipe_name %>
+      <div class="recipe_name_link">
+        <%= link_to "#{recipe.recipe_name}", recipes_path(recipe) %>
+      </div>
+      <br>
       <br>
     <% end %>
-    <br>
-    <br>
-  >
 </div>

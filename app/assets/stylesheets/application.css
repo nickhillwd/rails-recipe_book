@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+/*########## RECIPE INDEX PAGE ##########*/
+
+.recipe_headder {
+  text-align: center;
+  font-size: 50px;
+  font-family: Helvetica, Arial;
+
+}
+
+.recipe_list {
+  margin: auto;
+  width: 60%;
+}
+
+.recipe_name_link a {
+  text-decoration: none;
+  font-family: Helvetica, Arial;
+  font-size: 30px;
+  display: inline-block;
+  float: right;
+}
+
+.recipe_list img {
+  max-height: 125px;
+  max-width: 125px;
+  display: inline-block;
+  float: left;
+}
+
