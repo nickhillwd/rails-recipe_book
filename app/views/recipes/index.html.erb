@@ -1,0 +1,15 @@
+
+<h1> <%= "#{@catagories_names_array.first}" %> </h1>
+
+<div class="recipe_list">
+  <a href=
+    <% @recipes.each do |recipe| %>
+      <img src="<%= recipe.picture %>">
+      <br>
+      <%= recipe.recipe_name %>
+      <br>
+    <% end %>
+    <br>
+    <br>
+  >
+</div>
