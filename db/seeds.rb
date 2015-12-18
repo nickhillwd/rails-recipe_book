@@ -10,10 +10,10 @@ Catagory.delete_all
 
 Recipe.delete_all
 
- Recipe.create!(recipe_name: 'Soup', method: 'cook it all and blen the hell outa it', ingredients: 'Vegetables, water, stock cube', picture: 'http://weknowyourdreams.com/images/soup/soup-02.jpg')
- Recipe.create!(recipe_name: 'Meat and Potato Pie', method: 'cook the meat in the slow cooker and chuck some pastry on top like you would throw a frisbie', cooking_temp: 180, ingredients: 'beef meat, gravy, potatoes, pastry')
-  Recipe.create!(recipe_name: 'Chocolate Cake', method: 'mix it all up and bake it', cooking_temp: 180, ingredients: 'Flour, Chocolate, eggs, cocoa powder, sugar', picture: 'http://weknowyourdreams.com/images/cake/cake-02.jpg')
-  Recipe.create!(recipe_name: 'Bread', method: 'mix it all up and bake it', cooking_temp: 200, ingredients: 'Flour, Yeast, water, salt, sugar', picture: 'http://weknowyourdreams.com/images/bread/bread-01.jpg')
+ Recipe.create!(recipe_name: 'Soup', method: 'cook it all and blen the hell outa it', ingredients: 'Vegetables, water, stock cube', picture: 'http://weknowyourdreams.com/images/soup/soup-02.jpg', catagory_id: 21)
+ Recipe.create!(recipe_name: 'Meat and Potato Pie', method: 'cook the meat in the slow cooker and chuck some pastry on top like you would throw a frisbie', cooking_temp: 180, ingredients: 'beef meat, gravy, potatoes, pastry', catagory_id: 22)
+  Recipe.create!(recipe_name: 'Chocolate Cake', method: 'mix it all up and bake it', cooking_temp: 180, ingredients: 'Flour, Chocolate, eggs, cocoa powder, sugar', picture: 'http://weknowyourdreams.com/images/cake/cake-02.jpg', catagory_id: 23)
+  Recipe.create!(recipe_name: 'Bread', method: 'mix it all up and bake it', cooking_temp: 200, ingredients: 'Flour, Yeast, water, salt, sugar', picture: 'http://weknowyourdreams.com/images/bread/bread-01.jpg', catagory_id: 24)
 
 Ingredient.delete_all
 
