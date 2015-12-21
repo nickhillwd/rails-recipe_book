@@ -3,5 +3,5 @@
 <% @recipes.each do %>
   <% |recipes| %>
   <img src="<%= recipes.picture %>">
-  <%= recipes.recipe_name %>
+  <%= link_to("#{recipes.recipe_name}", recipe_path("#{recipes.id}")) %>
 <% end %>
