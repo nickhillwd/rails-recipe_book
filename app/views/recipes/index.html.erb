@@ -4,13 +4,13 @@
 <div class="recipe_list">
     <% @recipes.each do |recipe| %>
       <% if recipe.picture == nil %>
-        <%= image_tag 'comingSoonStamp.jpg' %>
+        <img src="<%= asset_path('comingSoonStamp.jpg') %>" class="recipe_image" >
       <% else %>
-        <img src="<%= recipe.picture %>">
+        <img src="<%= recipe.picture %>" class="recipe_image">
       <% end %>
       <br>
       <div class="recipe_name_link">
-        <%= link_to "#{recipe.recipe_name}", recipes_path(recipe) %>
+        <%= link_to "#{recipe.recipe_name}", recipes_path %>
       </div>
       <br>
       <br>

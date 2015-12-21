@@ -1,6 +1,6 @@
 <div class="catagory_left">
   <ul>
-    <li><%= link_to "#{@catagories_names_array.first}", recipes_path %></li>
+    <li><%= link_to "#{@catagories_names_array.first}", catagory_path(@catagory_id_array.first) %></li>
     <li><%= @catagories_names_array.second %></li>
   </ul>
 </div>

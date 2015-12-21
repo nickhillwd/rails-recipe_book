@@ -5,6 +5,15 @@ class CatagoryController < ApplicationController
     @catagories_names_array = catagories.map do |catagory|
       catagory.catagory_name
     end
+
+    @catagory_id_array = catagories.map do
+      |catagory|
+      catagory.id
+    end
+  end
+
+  def show
+
   end
 
 end
