@@ -1,13 +1,13 @@
 <div class="catagory_left">
   <ul>
     <li><%= link_to "#{@catagories_names_array.first}", catagory_path(@catagory_id_array.first) %></li>
-    <li><%= @catagories_names_array.second %></li>
+    <li><%= link_to "#{@catagories_names_array.second}", catagory_path(@catagory_id_array.second) %></li>
   </ul>
 </div>
 
 <div class="catagory_right">
   <ul>
-    <li><%= @catagories_names_array.third %></li>
-    <li><%= @catagories_names_array[3] %></li>
+    <li><%= link_to "#{@catagories_names_array.third}", catagory_path(@catagory_id_array.third) %></li>
+    <li><%= link_to "#{@catagories_names_array[3]}", catagory_path(@catagory_id_array[3]) %></li>
   </ul>
 </div>
