@@ -1,3 +1,7 @@
 <h1><%= @catagory.catagory_name %></h1>
 
-<%= @recipes %>
+<% @recipes.each do %>
+  <% |recipes| %>
+  <%= recipes.picture %>
+  <%= recipes.recipe_name %>
+<% end %>
