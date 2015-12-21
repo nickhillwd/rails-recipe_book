@@ -1,3 +1,9 @@
 <h1> <%= @recipe.recipe_name %> </h1>
 
 <img src="<%= @recipe.picture %>">
+<p> Ingredients: <%= @recipe.ingredients %> </p>
+<p> Method: <%= @recipe.method %> </p>
+<% if @recipe.cooking_temp != nil %>
+  <p>Cooking Temp: <%= @recipe.cooking_temp %> °C</p>
+<% end %>
+<p>Recipe was added <%= @recipe.created_at.strftime("%d/%m/%Y") %></p>
