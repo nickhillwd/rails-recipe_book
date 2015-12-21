@@ -2,6 +2,6 @@
 
 <% @recipes.each do %>
   <% |recipes| %>
-  <%= recipes.picture %>
+  <img src="<%= recipes.picture %>">
   <%= recipes.recipe_name %>
 <% end %>
