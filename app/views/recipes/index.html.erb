@@ -3,7 +3,11 @@
 
 <div class="recipe_list">
     <% @recipes.each do |recipe| %>
-      <img src="<%= recipe.picture %>">
+      <% if recipe.picture == nil %>
+        <%= image_tag 'comingSoonStamp.jpg' %>
+      <% else %>
+        <img src="<%= recipe.picture %>">
+      <% end %>
       <br>
       <div class="recipe_name_link">
         <%= link_to "#{recipe.recipe_name}", recipes_path(recipe) %>
