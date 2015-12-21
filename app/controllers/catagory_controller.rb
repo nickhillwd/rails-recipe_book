@@ -12,8 +12,4 @@ class CatagoryController < ApplicationController
     end
   end
 
-  def show
-
-  end
-
 end
