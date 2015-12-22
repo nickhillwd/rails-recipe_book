@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  before_save {self.user_email = user_email.downcase}
+  before_save {user_email.downcase!}
 
   validates(:user_name, presence: true, length: {maximum: 50})
   
