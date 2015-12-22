@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151221093913) do
+ActiveRecord::Schema.define(version: 20151222131109) do
 
   create_table "Users", force: :cascade do |t|
     t.string   "user_name"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20151221093913) do
     t.datetime "updated_at", null: false
     t.integer  "recipe_id"
   end
+
+  add_index "Users", ["user_email"], name: "index_users_on_user_email", unique: true
 
   create_table "catagories", force: :cascade do |t|
     t.datetime "created_at",    null: false
