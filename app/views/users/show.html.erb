@@ -1,1 +1,5 @@
-<%= @user.user_name %>, <%= @user.user_email %>
+<%provide(:title, @user.user_name) %>
+
+<h1>
+  <%= @user.user_name %>
+</h1>
