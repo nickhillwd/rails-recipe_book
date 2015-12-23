@@ -31,9 +31,9 @@
 
 User.delete_all
 
-  User.create!(user_name: 'Nick', user_email: 'nick@example.com', password: 'Password1', password_confirmation: 'Password1')
-  User.create!(user_name: 'Justyna', user_email: 'justyna@exapmle.com', password: 'Password1', password_confirmation: 'Password1')
-  User.create!(user_name: 'David', user_email: 'david@example.com', password: 'Password1', password_confirmation: 'Password1')
+  User.create!(user_name: 'Nick', user_email: 'nick@example.com', password: 'Password1', password_confirmation: 'Password1', recipe_id: 21)
+  User.create!(user_name: 'Justyna', user_email: 'justyna@exapmle.com', password: 'Password1', password_confirmation: 'Password1', recipe_id: 22)
+  User.create!(user_name: 'David', user_email: 'david@example.com', password: 'Password1', password_confirmation: 'Password1', recipe_id: 23)
 
 #
 # Examples:

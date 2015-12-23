@@ -4,9 +4,21 @@
   <h3><%= message %></h3>
 <% end %>
 
-<h1>
-  <%= @user.user_name %>
-</h1>
-
+<h1> <%= @user.user_name %> </h1>
 <p> <%= @user.user_email %> </p>
+
+<div>
+  <ul>
+    <li> <%= link_to("Add Recipe", new_recipe_path) %> </li>
+  </ul>
+</div>
+
+<div>
+  <% @users_recipes.each do %>
+  <% |recipes| %>
+  <img src="<%= recipes.picture %>">
+  <%= link_to("#{recipes.recipe_name}", recipe_path("#{recipes.id}")) %>
+<% end %>
+</div>
+
 

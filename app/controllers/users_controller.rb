@@ -2,8 +2,10 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+
     #debugger
     
+    @users_recipes = Recipe.find_by_sql("SELECT * FROM recipes WHERE id = #{@user.recipe_id} ORDER BY recipe_name desc")   
   end
 
   def new
