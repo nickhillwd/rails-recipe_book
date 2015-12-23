@@ -13,4 +13,8 @@
   <%= f.submit "Log In" %>
 <% end %>
 
+<% flash.each do |message_type, message| %>
+  <h3><%= message %></h3>
+<% end %>
+
 <p>New User? <%= link_to "Sign Up Now!", new_user_path %></p>
