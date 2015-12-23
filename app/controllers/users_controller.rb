@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def create
     User.create(user_params)
-    redirect_to(user_path[params :id])
+    redirect_to user_path(@user)
   end
 
   private
