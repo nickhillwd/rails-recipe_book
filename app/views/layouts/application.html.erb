@@ -11,15 +11,20 @@
   <nav>
     <div class="left">
       <ul>
-        <li> <%= link_to('Home', root_path) %> </li>
+        <li><%= link_to('Home', root_path) %></li>
+        <li><%= link_to('Catagories', root_path) %></li>
+        <li>search function</li>
       </ul>
     </div>
     <div class="right">
       <ul>
-        <li><%= link_to('Log In', login_path) %></li>
-        <li><%= link_to('Sign Up', new_user_path) %></li>
-        <li>search function</li>
-        <li><%= link_to('Catagories', root_path) %></li>
+        <% if logged_in? %>
+          <li><%= link_to('Log Out', logout_path, method: "delete") %></li>
+          <li><%= link_to('Profile', current_user) %></li>
+        <% else %>  
+          <li><%= link_to('Log In', login_path) %></li>
+          <li><%= link_to('Sign Up', new_user_path) %></li>
+        <% end %>
       </ul>
     </div>
   </nav>
