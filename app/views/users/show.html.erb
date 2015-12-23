@@ -1,5 +1,9 @@
 <%provide(:title, @user.user_name) %>
 
+<% flash.each do |message_type, message| %>
+  <h3><%= message %></h3>
+<% end %>
+
 <h1>
   <%= @user.user_name %>
 </h1>
