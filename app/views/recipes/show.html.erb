@@ -7,3 +7,7 @@
   <p>Cooking Temp: <%= @recipe.cooking_temp %> °C</p>
 <% end %>
 <p>Recipe was added <%= @recipe.created_at.strftime("%d/%m/%Y") %></p>
+<ul>
+  <%= button_to("Delete #{@recipe.recipe_name}", recipe_path, method: :delete, data: {confirm: 'Delete Recipe? Are you sure?!'} ) %>
+  <li><%= link_to("Edit #{@recipe.recipe_name}", edit_recipe_path) %></li>
+</ul>
