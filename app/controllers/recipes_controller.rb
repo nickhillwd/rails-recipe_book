@@ -38,7 +38,12 @@ class RecipesController < ApplicationController
     @catagories = Catagory.all
   end
 
-  
+  def update
+    @user = User.find_by(id: session[:user_id])
+    recipe = Recipe.find(params[:id])
+    recipe.update(recipe_params)
+    redirect_to(user_path(@user.id))
+  end
 
     private
 
