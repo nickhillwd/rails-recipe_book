@@ -20,13 +20,13 @@ class RecipesController < ApplicationController
 
   def create
       #binding.pry
-      Recipe.create(params[:recipe])
+      Recipe.create(recipe_params)
       redirect_to(recipes_path)
     end
 
     private
 
-      def player_params
+      def recipe_params
         params.require(:recipe).permit(:recipe_name, :method, :cooking_temp, :ingredients, :picture, :catagory_id, :user_id)
       end
 
