@@ -18,4 +18,16 @@ class RecipesController < ApplicationController
     @user = User.find_by(id: session[:user_id])
   end
 
+  def create
+      #binding.pry
+      Recipe.create(params[:recipe])
+      redirect_to(recipes_path)
+    end
+
+    private
+
+      def player_params
+        params.require(:recipe).permit(:recipe_name, :method, :cooking_temp, :ingredients, :picture, :catagory_id, :user_id)
+      end
+
 end
