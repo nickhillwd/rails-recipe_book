@@ -33,8 +33,12 @@ class RecipesController < ApplicationController
   end
 
   def edit
-
+    @user = User.find_by(id: session[:user_id])
+    @recipe = Recipe.find(params[:id])
+    @catagories = Catagory.all
   end
+
+  
 
     private
 
