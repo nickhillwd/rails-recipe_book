@@ -15,37 +15,41 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @catagories = Catagory.all
-    @user = User.find_by(id: session[:user_id])
+    @user = user
   end
 
   def create
     #binding.pry
-    @user = User.find_by(id: session[:user_id])
+    @user = user
     Recipe.create(recipe_params)
     redirect_to(user_path(@user.id))
   end
 
   def destroy
-    @user = User.find_by(id: session[:user_id])
+    @user = user
     recipe = Recipe.find(params[:id])
     recipe.destroy
     redirect_to(user_path(@user.id))
   end
 
   def edit
-    @user = User.find_by(id: session[:user_id])
+    @user = user
     @recipe = Recipe.find(params[:id])
     @catagories = Catagory.all
   end
 
   def update
-    @user = User.find_by(id: session[:user_id])
+    @user = user
     recipe = Recipe.find(params[:id])
     recipe.update(recipe_params)
     redirect_to(user_path(@user.id))
   end
 
     private
+
+      def user
+        User.find_by(id: session[:user_id])
+      end
 
       def recipe_params
         params.require(:recipe).permit(:recipe_name, :method, :cooking_temp, :ingredients, :picture, :catagory_id, :user_id)
