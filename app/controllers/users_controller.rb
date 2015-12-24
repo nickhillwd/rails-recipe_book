@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
     #debugger
     
-    @users_recipes = Recipe.find_by_sql("SELECT * FROM recipes WHERE id = #{@user.recipe_id} ORDER BY recipe_name desc")   
+    @users_recipes = Recipe.find_by_sql("SELECT * FROM recipes WHERE user_id = #{@user.id} ORDER BY recipe_name desc")   
   end
 
   def new
