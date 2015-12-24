@@ -1,0 +1,25 @@
+<%provide(:title, 'Add New Recipe') %>
+
+<%= form_for @recipe do |f| %>
+  <%= f.label :recipe_name %>
+  <%= f.text_field :recipe_name %>
+  <br>
+  <%= f.label :catagory_id, "Catagory" %>
+  <%= f.collection_select(:catagory_id, @catagories, :id, :catagory_name, prompt: "Select Recipe Catagory") %>
+  <br>
+  <%= f.label :ingredients %>
+  <%= f.text_field :ingredients %>
+  <br>
+  <%= f.label :method %>
+  <%= f.text_field :method %>
+  <br>
+  <%= f.label :cooking_temp, "Oven Cooking Temperature" %>
+  <%= f.text_field :cooking_temp %>
+  <br>
+  <%= f.label :picture, "Upload Picture:" %>
+  <%= f.text_field :picture %>
+  <br>
+  <br>
+  <%= f.hidden_field :user_id, :value => @current_user %>
+  <%= f.submit 'Add Recipe!' %>
+<% end %>

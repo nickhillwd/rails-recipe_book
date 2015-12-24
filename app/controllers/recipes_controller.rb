@@ -13,7 +13,9 @@ class RecipesController < ApplicationController
   end
 
   def new
-    
+    @recipe = Recipe.new
+    @catagories = Catagory.all
+    @user = User.find_by(id: session[:user_id])
   end
 
 end
