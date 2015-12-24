@@ -20,8 +20,9 @@ class RecipesController < ApplicationController
 
   def create
       #binding.pry
+      @user = User.find_by(id: session[:user_id])
       Recipe.create(recipe_params)
-      redirect_to(recipes_path)
+      redirect_to(user_path(@user.id))
     end
 
     private
