@@ -8,6 +8,16 @@ class UsersController < ApplicationController
     @users_recipes = Recipe.find_by_sql("SELECT * FROM recipes WHERE user_id = #{@user.id} ORDER BY recipe_name desc")   
   end
 
+  def edit
+    @user = User.find(params[:id]) 
+  end
+
+  def update
+    user = User.find(params[:id])
+    user.update(user_params)
+    redirect_to(user_path(user.id))
+  end
+
   def new
     @user = User.new
   end
@@ -21,6 +31,7 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+
   end
 
   private
