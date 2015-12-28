@@ -1,7 +1,13 @@
 <h1><%= @catagory.catagory_name %></h1>
 
-<% @recipes.each do %>
-  <% |recipes| %>
-  <img src="<%= recipes.picture %>">
-  <%= link_to("#{recipes.recipe_name}", recipe_path("#{recipes.id}")) %>
-<% end %>
+<ul>
+  <% @recipes.each do %>
+    <% |recipes| %>
+    <li><% if recipes.picture != nil %>
+      <img src="<%= recipes.picture %>">
+    <% else %>
+      <img src="<%= asset_path('SalmonOnChoppingBoard.jpg') %>"/>
+    <% end %></li>
+    <li><%= link_to("#{recipes.recipe_name}", recipe_path("#{recipes.id}")) %></li>
+  <% end %>
+</ul>
