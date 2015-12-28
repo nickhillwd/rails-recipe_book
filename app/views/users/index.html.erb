@@ -1,0 +1,16 @@
+<%provide(:title, @user.user_name) %>
+
+<h1>Admin Panel</h1>
+
+<h3>All Users</h3>
+
+<% @all_users.each do |user|  %>
+  <ul>
+    <li><%= user.user_name %></li>
+    <li><%= link_to "Edit #{user.user_name}", edit_user_path(user) %></li>
+    <li><%= button_to("Delete #{user.user_name}", user_path(user), method: :delete, data: {confirm: "Delete User? Please confirm:"} ) %></li>
+  <br>
+  </ul>
+<% end %>
+
+<h3>All Recipes</h3>

@@ -14,6 +14,10 @@
   </ul>
 </div>
 
+<% if current_user.admin? %>
+  <%= link_to "View All Users", users_path %>
+<% end %>  
+
 <div>
   <% @users_recipes.each do %>
   <% |recipes| %>
@@ -21,5 +25,3 @@
   <%= link_to("#{recipes.recipe_name}", recipe_path("#{recipes.id}")) %>
 <% end %>
 </div>
-
-

@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
   
+  def index
+    @user = current_user
+    @all_users = User.all
+    @all_recipes = Recipe.all
+  end
+
   def show
     @user = User.find(params[:id])
 
