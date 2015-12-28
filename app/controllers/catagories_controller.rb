@@ -9,7 +9,12 @@ class CatagoriesController < ApplicationController
   end
 
   def index
-
+    @recipes = Recipe.all
+    if params[:search]
+      @recipes = Recipe.search(params[:search]).order("recipe_name DESC")
+    else
+      @recipe = Recipe.all.order("recipe_name DESC")
+    end
   end
 
 end
