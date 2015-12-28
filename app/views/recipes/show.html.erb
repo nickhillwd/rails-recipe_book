@@ -1,9 +1,9 @@
 <h1> <%= @recipe.recipe_name %> </h1>
 
 <% if @recipe.picture != nil %>
-  <img src="<%= @recipe.picture %>">
+  <img src="<%= @recipe.picture %>" class='recipe_image'>
 <% else %>
-  <img src="<%= asset_path('SalmonOnChoppingBoard.jpg')%>" />
+  <img src="<%= asset_path('SalmonOnChoppingBoard.jpg')%>" class='recipe_image'/>
 <% end %>
 
 <p> Ingredients: <%= @recipe.ingredients %> </p>
