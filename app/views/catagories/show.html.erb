@@ -9,5 +9,6 @@
       <img src="<%= asset_path('SalmonOnChoppingBoard.jpg') %>" class='recipe_image'/>
     <% end %></li>
     <li><%= link_to("#{recipes.recipe_name}", recipe_path("#{recipes.id}")) %></li>
+    <br>
   <% end %>
 </ul>

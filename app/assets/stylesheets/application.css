@@ -37,9 +37,18 @@ nav .left {
   float: left;
  }
 
+ nav .left li {
+  display: inline-block;
+  padding-right: 10px;
+ }
+
 nav .right {
   float: right;
+ }
+
+ nav .right li {
   display: inline-block;
+  padding-left: 10px;
  }
 
 /*########## RECIPE INDEX PAGE ##########*/
