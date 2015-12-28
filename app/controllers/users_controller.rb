@@ -14,6 +14,13 @@ class UsersController < ApplicationController
     @users_recipes = Recipe.find_by_sql("SELECT * FROM recipes WHERE user_id = #{@user.id} ORDER BY recipe_name desc")   
   end
 
+    def destroy
+      #debugger
+      user = User.find(params[:id])
+      user.destroy
+      redirect_to(users_path)      
+    end
+
   def edit
     @user = User.find(params[:id]) 
   end
@@ -37,6 +44,7 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+
 
   end
 
