@@ -14,3 +14,18 @@
 <% end %>
 
 <h3>All Recipes</h3>
+
+<% @all_recipes.each do |recipe| %>
+  <ul>
+    <li><%= recipe.recipe_name %></li>
+    <li><%= link_to "Edit #{recipe.recipe_name}", edit_recipe_path(recipe) %></li>
+    <li><%= button_to("Delete #{recipe.recipe_name}", recipe_path(recipe), method: :delete, data: {confirm: "Delete Recipe? Please confirm:"}) %></li>
+    <br>
+  </ul>
+<% end %>
+
+
+
+
+
+
