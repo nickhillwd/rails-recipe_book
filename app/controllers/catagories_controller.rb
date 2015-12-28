@@ -8,4 +8,8 @@ class CatagoriesController < ApplicationController
     @recipes = Recipe.find_by_sql("SELECT * FROM recipes WHERE catagory_id = #{id} ORDER BY recipe_name desc")
   end
 
+  def index
+
+  end
+
 end
