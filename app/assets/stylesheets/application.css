@@ -213,6 +213,10 @@ body {
   color: #fff;
 }
 
+.index_catagory a:hover {
+  color: teal;
+}
+
 /*########## RECIPE & CATAGORIES ##########*/
 
 
@@ -336,9 +340,6 @@ body {
 
 /*######## CATAGORIES INDEX (SEARCH REULTS) ########*/
 
-.scrollable a {
-  font-size: 3em;
-}
 
 
 
