@@ -6,22 +6,28 @@
 
 <h1> <%= @user.user_name %> </h1>
 <p> <%= @user.user_email %> </p>
-<%= link_to("Edit My Details", edit_user_path) %>
 
-<div>
-  <ul>
-    <li> <%= link_to("Add Recipe", new_recipe_path) %> </li>
-  </ul>
+<div class="user_options">
+  <%= link_to("Edit My Details", edit_user_path) %>
+
+  <%= link_to("Add Recipe", new_recipe_path) %>
+
+  <% if current_user.admin? %>
+    <%= link_to "View All Users", users_path %>
+  <% end %>
 </div>
 
-<% if current_user.admin? %>
-  <%= link_to "View All Users", users_path %>
-<% end %>  
-
-<div>
-  <% @users_recipes.each do %>
-  <% |recipes| %>
-  <img src="<%= recipes.picture %>">
-  <%= link_to("#{recipes.recipe_name}", recipe_path("#{recipes.id}")) %>
-<% end %>
+<div class="scrollable">
+  <ul>
+    <% @users_recipes.each do %>
+      <% |recipes| %>
+      <li><% if recipes.picture != nil %>
+        <img src="<%= recipes.picture %>" class='recipe_image'>
+      <% else %>
+        <img src="<%= asset_path('SalmonOnChoppingBoard.jpg') %>" class='recipe_image'/>
+      <% end %></li>
+      <li class="recipe_name_link"><%= link_to("#{recipes.recipe_name}", recipe_path("#{recipes.id}")) %></li>
+      <br>
+    <% end %>
+  </ul>
 </div>

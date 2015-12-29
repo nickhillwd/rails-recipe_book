@@ -1,7 +1,10 @@
-<% if @recipes.present? %>
-  <% @recipes.each do |recipe| %>
-    <%= link_to "#{recipe.recipe_name}", recipe_path(recipe) %>
+
+<div class="scrollable">
+  <% if @recipes.present? %>
+    <% @recipes.each do |recipe| %>
+      <%= link_to "#{recipe.recipe_name}", recipe_path(recipe) %>
+    <% end %>
+  <% else %>
+    <h3>There are no recipes containing: <%= params[:search] %></h3>
   <% end %>
-<% else %>
-  <p>There are no recipes containing <%= params[:search] %></p>
-<% end %>
+</div>

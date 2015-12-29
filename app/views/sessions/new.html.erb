@@ -2,19 +2,21 @@
 
 <h1> Log In </h1>
 
-<%= form_for(:session, url: login_path) do |f| %>
-  
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br>
-  <%= f.submit "Log In" %>
-<% end %>
+<div class="log_in">
+  <%= form_for(:session, url: login_path) do |f| %>
+    
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.submit "Log In" %>
+  <% end %>
 
-<% flash.each do |message_type, message| %>
-  <h3><%= message %></h3>
-<% end %>
+  <% flash.each do |message_type, message| %>
+    <h3><%= message %></h3>
+  <% end %>
+</div>
 
-<p>New User? <%= link_to "Sign Up Now!", new_user_path %></p>
+<p><%= link_to "New User? Sign Up Now!", new_user_path %></p>

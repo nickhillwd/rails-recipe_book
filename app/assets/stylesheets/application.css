@@ -18,6 +18,70 @@
  @import "normalize.css";
  /*@import "reactive.css"*/
 
+  /*########## GENERAL ##########*/
+
+ h1 {
+   font-family: Helvetica, Arial;
+   font-weight: bold;
+   font-size: 4em;
+   color: #fff;
+   text-align: center;
+ }
+
+ h2 {
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  font-size: 3em;
+  color: #fff;
+  text-align: center; 
+ }
+
+ h3 {
+   font-family: Helvetica, Arial;
+   font-weight: bold;
+   font-size: 2em;
+   color: #fff;
+   text-align: center;  
+ }
+
+ h4 {
+   font-family: Helvetica, Arial;
+   font-weight: bold;
+   font-size: 1.5em;
+   color: #fff;
+   text-align: center;
+ }
+
+ h5 {
+   font-family: Helvetica, Arial;
+   font-weight: bold;
+   font-size: 1em;
+   color: #fff;
+   text-align: center;
+ }
+
+ p {
+   font-family: Helvetica, Arial;
+   font-weight: bold;
+   font-size: 1em;
+   color: #fff;
+   text-align: center;
+ }
+
+ a {
+   text-decoration: none;
+   color: #fff;
+   font-family: Helvetica, Arial;
+ }
+
+ a:hover {
+  color: teal;
+ }
+
+ ul {
+   list-style-type: none;
+ }
+
  /*########## NAV BAR ##########*/
 
 nav {
@@ -75,65 +139,6 @@ body {
   background-size: auto;
   /*background: linear-gradient(to bottom right, gray, white);*/
 } 
-
- /*########## GENERAL ##########*/
-
-h1 {
-  font-family: Helvetica, Arial;
-  font-weight: bold;
-  font-size: 4em;
-  color: #fff;
-  text-align: center;
-}
-
-h2 {
- font-family: Helvetica, Arial;
- font-weight: bold;
- font-size: 3em;
- color: #fff;
- text-align: center; 
-}
-
-h3 {
-  font-family: Helvetica, Arial;
-  font-weight: bold;
-  font-size: 2em;
-  color: #fff;
-  text-align: center;  
-}
-
-h4 {
-  font-family: Helvetica, Arial;
-  font-weight: bold;
-  font-size: 1.5em;
-  color: #fff;
-  text-align: center;
-}
-
-h5 {
-  font-family: Helvetica, Arial;
-  font-weight: bold;
-  font-size: 1em;
-  color: #fff;
-  text-align: center;
-}
-
-p {
-  font-family: Helvetica, Arial;
-  font-weight: bold;
-  font-size: 1em;
-  color: #fff;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-ul {
-  list-style-type: none;
-}
 
 /*########## INDEX PAGE ##########*/
 
@@ -246,6 +251,7 @@ ul {
 
 .scrollable li {
   display: inline-block;
+  margin:auto;
 }
 
 .scrollable img {
@@ -281,5 +287,68 @@ ul {
 .edit_and_new_recipe_form label {
   text-align: center;
   color: #fff;
+  font-family: Helvetica, Arial;
 }
+
+/*########## USERS SHOW PAGE ##########*/
+
+.user_options {
+  display:inline-block;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.user_options a {
+  text-align: center;
+  margin:20px;
+  display:inline-block;
+}
+
+/*########## USERS NEW PAGE ##########*/
+
+.sign_up_form {
+  width: 200px;
+  height: 100%;
+  margin: auto;
+}
+
+.sign_up_form label {
+  text-align: center;
+  color: #fff;
+  font-family: Helvetica, Arial;
+}
+
+
+/*######## SESSIONS NEW (LOG IN) PAGE ########*/
+
+.log_in {
+  width: 200px;
+  height: 100%;
+  margin: auto;
+}
+
+.log_in label {
+  text-align: center;
+  color: #fff;
+  font-family: Helvetica, Arial;
+}
+
+
+/*######## CATAGORIES INDEX (SEARCH REULTS) ########*/
+
+.scrollable a {
+  font-size: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
