@@ -16,14 +16,14 @@
  */
 
  @import "normalize.css";
- @import "reactive.css"
+ /*@import "reactive.css"*/
 
  /*########## NAV BAR ##########*/
 
 nav {
   display: inline-block;
   margin-bottom: 20px;
-  background-color: gray;
+  background-color: #777f40;
   width: 100%;
   padding: 0;
 }
@@ -37,7 +37,7 @@ nav a {
   text-decoration: none;
   font-family: Helvetica, Arial;
   font-size: 17px;
-  color: #000;
+  color: #fff;
   line-height: inherit;
  }
 
@@ -59,6 +59,11 @@ nav .right li {
   padding-left: 10px;
 }
 
+nav form input:nth-child(3) {
+  color: #fff;
+  background-color: #474c26;
+}
+
  /*########## BACKGROUND IMAGE ##########*/
 
 body {
@@ -72,6 +77,22 @@ body {
 } 
 
  /*########## INDEX PAGE ##########*/
+
+h1 {
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
+}
+
+h3 {
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #fff;
+  text-align: center;  
+}
 
 .catagory_left {
   width: 49.5%;

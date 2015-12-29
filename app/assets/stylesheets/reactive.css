@@ -1,0 +1,15 @@
+@media screen and (max-width: 1050px) {
+  .catagory_left {
+    display: block;
+    margin: 0;
+    width: 100%;
+    clear: both;
+  }
+
+  .catagory_right {
+    display: block;
+    margin: 0;
+    width: 100%;
+    clear: both;
+  }
+}
