@@ -270,7 +270,16 @@ ul {
       text-align: center;
 }
 
+/*########## NEW AND EDIT RECIPE FORM ##########*/
 
+.edit_and_new_recipe_form {
+  width: 200px;
+  height: 100%;
+  margin: auto;
+}
 
-
+.edit_and_new_recipe_form label {
+  text-align: center;
+  color: #fff;
+}
 
