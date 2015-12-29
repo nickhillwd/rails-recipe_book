@@ -1,13 +1,27 @@
 <div class="catagory_left">
   <ul>
-    <li><%= link_to "#{@catagories_names_array.first}", catagory_path(@catagory_id_array.first) %></li>
-    <li><%= link_to "#{@catagories_names_array.second}", catagory_path(@catagory_id_array.second) %></li>
+    
+    <div class="index_catagory">
+      <li><%= link_to "#{@catagories_names_array.first}", catagory_path(@catagory_id_array.first) %></li>
+    </div>
+
+    <div class="index_catagory">
+      <li><%= link_to "#{@catagories_names_array.second}", catagory_path(@catagory_id_array.second) %></li>
+    </div>
+    
   </ul>
 </div>
 
 <div class="catagory_right">
   <ul>
-    <li><%= link_to "#{@catagories_names_array.third}", catagory_path(@catagory_id_array.third) %></li>
-    <li><%= link_to "#{@catagories_names_array[3]}", catagory_path(@catagory_id_array[3]) %></li>
+
+    <div class="index_catagory">
+      <li><%= link_to "#{@catagories_names_array.third}", catagory_path(@catagory_id_array.third) %></li>
+    </div>
+
+    <div class="index_catagory">
+      <li><%= link_to "#{@catagories_names_array[3]}", catagory_path(@catagory_id_array[3]) %></li>
+    </div>
+
   </ul>
 </div>
