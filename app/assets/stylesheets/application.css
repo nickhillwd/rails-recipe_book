@@ -76,7 +76,7 @@ body {
   /*background: linear-gradient(to bottom right, gray, white);*/
 } 
 
- /*########## INDEX PAGE ##########*/
+ /*########## GENERAL ##########*/
 
 h1 {
   font-family: Helvetica, Arial;
@@ -86,13 +86,56 @@ h1 {
   text-align: center;
 }
 
+h2 {
+ font-family: Helvetica, Arial;
+ font-weight: bold;
+ font-size: 3em;
+ color: #fff;
+ text-align: center; 
+}
+
 h3 {
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  font-size: 2em;
+  color: #fff;
+  text-align: center;  
+}
+
+h4 {
   font-family: Helvetica, Arial;
   font-weight: bold;
   font-size: 1.5em;
   color: #fff;
-  text-align: center;  
+  text-align: center;
 }
+
+h5 {
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*########## INDEX PAGE ##########*/
 
 .catagory_left {
   width: 49.5%;
@@ -165,13 +208,8 @@ h3 {
   color: #fff;
 }
 
-/*########## RECIPE INDEX PAGE ##########*/
+/*########## RECIPE & CATAGORIES ##########*/
 
-.recipe_headder {
-  text-align: center;
-  font-size: 50px;
-  font-family: Helvetica, Arial;
-}
 
 .recipe_list {
   margin: auto;
@@ -185,12 +223,54 @@ h3 {
   font-family: Helvetica, Arial;
   font-size: 30px;
   display: inline-block;
-  color: #000;
+  color: #fff;
+  line-height: 100px;
 }
 
 .recipe_image {
-  max-height: 125px;
-  max-width: 125px;
+  max-height: 100px;
+  max-width: 100px;
   display: inline-block;
 }
+
+/*########## CATAGORIES SHOW PAGE ##########*/
+
+.scrollable {
+  overflow: auto;
+  height: 500px;
+  width: 55%;
+  margin: auto;
+  padding: 0;
+  border: 0;
+}
+
+.scrollable li {
+  display: inline-block;
+}
+
+.scrollable img {
+  display: inline-block;
+}
+
+/*########## RECIPES SHOW PAGE ##########*/
+
+.individual_recipe_image {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+}
+
+.individual_recipe_image img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.logged_in_options {
+      margin: auto;
+      text-align: center;
+}
+
+
+
+
 

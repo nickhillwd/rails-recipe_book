@@ -1,10 +1,12 @@
 <h1> <%= @recipe.recipe_name %> </h1>
 
-<% if @recipe.picture != nil %>
-  <img src="<%= @recipe.picture %>" class='recipe_image'>
-<% else %>
-  <img src="<%= asset_path('SalmonOnChoppingBoard.jpg')%>" class='recipe_image'/>
-<% end %>
+<div class="individual_recipe_image">
+  <% if @recipe.picture != nil %>
+    <img src="<%= @recipe.picture %>">
+  <% else %>
+    <img src="<%= asset_path('SalmonOnChoppingBoard.jpg')%>" class='recipe_image'/>
+  <% end %>
+</div>
 
 <p> Ingredients: <%= @recipe.ingredients %> </p>
 <p> Method: <%= @recipe.method %> </p>
@@ -12,10 +14,11 @@
   <p>Cooking Temp: <%= @recipe.cooking_temp %> °C</p>
 <% end %>
 <p>Recipe was added <%= @recipe.created_at.strftime("%d/%m/%Y") %></p>
-<ul>
-<% if logged_in? %>
-    <%= button_to("Delete #{@recipe.recipe_name}", recipe_path, method: :delete, data: {confirm: 'Delete Recipe? Are you sure?!'} ) %>
-    <li><%= link_to("Edit #{@recipe.recipe_name}", edit_recipe_path) %></li>
-  <% end %>
-</ul>
-
+<div class="logged_in_options">
+  <ul>
+  <% if logged_in? %>
+      <%= button_to("Delete #{@recipe.recipe_name}", recipe_path, method: :delete, data: {confirm: 'Delete Recipe? Are you sure?!'} ) %>
+      <li><%= link_to("Edit #{@recipe.recipe_name}", edit_recipe_path) %></li>
+    <% end %>
+  </ul>
+</div>
