@@ -16,6 +16,7 @@
  */
 
  @import "normalize.css";
+ @import "reactive.css"
 
  /*########## NAV BAR ##########*/
 
@@ -37,6 +38,7 @@ nav a {
   font-family: Helvetica, Arial;
   font-size: 17px;
   color: #000;
+  line-height: inherit;
  }
 
 nav .left {
@@ -52,10 +54,22 @@ nav .right {
   float: right;
  }
 
- nav .right li {
+nav .right li {
   display: inline-block;
   padding-left: 10px;
- }
+}
+
+ /*########## BACKGROUND IMAGE ##########*/
+
+body {
+  background-color: #EFFE81;
+  background: linear-gradient(to bottom right,#002f4b,#dc4225);
+  background-image: url("KitchenBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  /*background: linear-gradient(to bottom right, gray, white);*/
+} 
 
  /*########## INDEX PAGE ##########*/
 
@@ -88,6 +102,34 @@ nav .right {
   width: 100%;
 }
 
+#starter {
+  background-image: url("Starter.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#mains {
+  background-image: url("MainCourse.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#pudding {
+  background-image: url("Pudding.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#snacks_and_drinks {
+  background-image: url("SnacksAndDrinks.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .index_catagory li {
   list-style-type: none;
   text-align: center;
@@ -99,7 +141,7 @@ nav .right {
   font-family: Helvetica, Arial;
   font-size: 3.5em;
   font-weight: bold;
-  color: #000;
+  color: #fff;
 }
 
 /*########## RECIPE INDEX PAGE ##########*/
