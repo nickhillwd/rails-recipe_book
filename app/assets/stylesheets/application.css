@@ -78,6 +78,10 @@
   color: teal;
  }
 
+ li a:hover {
+  color: teal;
+ }
+
  ul {
    list-style-type: none;
  }
