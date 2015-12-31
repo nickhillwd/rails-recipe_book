@@ -16,7 +16,7 @@
 <p>Recipe was added <%= @recipe.created_at.strftime("%d/%m/%Y") %></p>
 <div class="logged_in_options">
   <ul>
-  <% if logged_in? %>
+  <% if logged_in? && (@current_user.id == @recipe.user_id) %>
       <%= button_to("Delete #{@recipe.recipe_name}", recipe_path, method: :delete, data: {confirm: 'Delete Recipe? Are you sure?!'} ) %>
       <li><%= link_to("Edit #{@recipe.recipe_name}", edit_recipe_path) %></li>
     <% end %>
