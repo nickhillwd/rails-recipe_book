@@ -42,6 +42,9 @@ class RecipesController < ApplicationController
     @user = user
     recipe = Recipe.find(params[:id])
     recipe.update(recipe_params)
+    if recipe.picture == ""
+      recipe.update({picture: nil})
+    end
     redirect_to(user_path(@user.id))
   end
 
