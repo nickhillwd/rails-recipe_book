@@ -86,7 +86,7 @@
    list-style-type: none;
  }
 
- /*########## NAV BAR ##########*/
+/*########## NAV BAR ##########*/
 
 nav {
   position: fixed;
@@ -132,6 +132,34 @@ nav .right li {
 nav form input:nth-child(3) {
   color: #fff;
   background-color: #474c26;
+}
+
+/*########## FOOTER ##########*/
+
+footer {
+  bottom: 0;
+  display: inline-block;
+  background-color: #777f40;
+  width: 100%;
+  padding: 0;
+}
+
+.social_icons {
+  padding: 0 20px;
+  display: inline-block;
+  margin-left: auto;
+  margin: right;
+}
+
+.social_icons img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social_icons h4 {
+  display: inline-block;
+  margin: 0;
+  line-height: inherit;
 }
 
  /*########## BACKGROUND IMAGE ##########*/
@@ -367,13 +395,3 @@ body {
 .admin_scroll a {
   padding: 0 20px;
 }
-
-
-
-
-
-
-
-
-
-
