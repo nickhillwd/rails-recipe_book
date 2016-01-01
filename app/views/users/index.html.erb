@@ -4,9 +4,9 @@
 
 <h3>All Users</h3>
 
-<div class="scrollable">
+<div class="scrollable" id="admin_users_scroll">
   <% @all_users.each do |user|  %>
-    <ul>
+    <ul class="admin_scroll">
       <li><p><%= user.user_name %></p></li>
       <li><%= link_to "Edit #{user.user_name}", edit_user_path(user) %></li>
       <li><%= button_to("Delete #{user.user_name}", user_path(user), method: :delete, data: {confirm: "Delete User? Please confirm:"} ) %></li>
@@ -19,7 +19,7 @@
 
 <div class="scrollable">
   <% @all_recipes.each do |recipe| %>
-    <ul>
+    <ul class="admin_scroll">
       <li><p><%= recipe.recipe_name %></p></li>
       <li><%= link_to "Edit #{recipe.recipe_name}", edit_recipe_path(recipe) %></li>
       <li><%= button_to("Delete #{recipe.recipe_name}", recipe_path(recipe), method: :delete, data: {confirm: "Delete Recipe? Please confirm:"}) %></li>

@@ -89,6 +89,8 @@
  /*########## NAV BAR ##########*/
 
 nav {
+  position: fixed;
+  top: 0;
   display: inline-block;
   margin-bottom: 20px;
   background-color: #777f40;
@@ -135,6 +137,7 @@ nav form input:nth-child(3) {
  /*########## BACKGROUND IMAGE ##########*/
 
 body {
+  padding-top: 50px;
   background-color: #EFFE81;
   background: linear-gradient(to bottom right,#002f4b,#dc4225);
   background-image: url("KitchenBackground.jpg");
@@ -259,7 +262,7 @@ body {
 
 .scrollable {
   overflow: auto;
-  height: 500px;
+  max-height: 500px;
   width: 55%;
   margin: auto;
   padding: 0;
@@ -355,9 +358,15 @@ body {
 
 /*######## CATAGORIES INDEX (SEARCH REULTS) ########*/
 
+/*######## USERS INDEX (ADMIN PANEL) ########*/
 
+.admin_scroll {
+  text-align: center;
+}
 
-
+.admin_scroll a {
+  padding: 0 20px;
+}
 
 
 
