@@ -98,7 +98,7 @@ nav {
 
 nav ul {
   list-style-type: none;
-  padding: 5px;
+  padding: 0 20px;
 }
 
 nav a {
@@ -146,6 +146,14 @@ body {
 
 /*########## INDEX PAGE ##########*/
 
+#index_h1 {
+  padding:0 60px;
+}
+
+#index_h3 {
+  padding:0 200px;
+}
+
 .catagory_left {
   width: 49.5%;
   display: inline-block;
@@ -171,7 +179,8 @@ body {
 .index_catagory {
   border: solid 1px #000;
   height: 300px;
-  margin:50px 0;
+  max-width: 480px;
+  margin:50px auto;
   width: 100%;
 }
 
@@ -234,7 +243,7 @@ body {
 .recipe_name_link a {
   text-decoration: none;
   font-family: Helvetica, Arial;
-  font-size: 30px;
+  font-size: 40px;
   display: inline-block;
   color: #fff;
   line-height: 100px;
@@ -277,6 +286,9 @@ body {
 .individual_recipe_image img {
   max-height: 200px;
   max-width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 
 .logged_in_options {
@@ -301,13 +313,12 @@ body {
 /*########## USERS SHOW PAGE ##########*/
 
 .user_options {
-  display:inline-block;
-  margin: auto;
-  padding: 10px;
+  text-align: center;
+  padding: 10px 10px 30px 10px;
 }
 
 .user_options a {
-  text-align: center;
+  font-size: 22px;
   margin:20px;
   display:inline-block;
 }
