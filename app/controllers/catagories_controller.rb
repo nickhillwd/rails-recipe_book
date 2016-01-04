@@ -10,8 +10,10 @@ class CatagoriesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+    @ingredients = Ingredient.all
     if params[:search]
       @recipes = Recipe.search(params[:search]).order("recipe_name DESC")
+      @ingredients = Ingredient.search(params[:search]).order("ingredient_name DESC")
     else
       @recipe = Recipe.all.order("recipe_name DESC")
     end
