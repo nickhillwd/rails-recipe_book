@@ -10,7 +10,10 @@
 
 <p> Ingredients: </p>
 <% @ingredients.each do |ingredient| %>
-<p> <%= ingredient.ingredient_name%> </p>
+  <p> <%= ingredient.ingredient_name%> </p>
+<% end %>
+<% @quantity_info.each do |info| %>
+  <p> <%= info.amount %> <%= info.unit %> </p>
 <% end %>
 <p> Method: <%= @recipe.method %> </p>
 <% if @recipe.cooking_temp != nil %>

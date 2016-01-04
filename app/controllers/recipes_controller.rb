@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @ingredients = Ingredient.where(recipe_id: params[:id])
     #debugger
+    @quantity_info = Quantity.where(recipe_id: params[:id])
   end
 
   def new
