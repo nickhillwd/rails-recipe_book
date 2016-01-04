@@ -10,6 +10,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @ingredients = Ingredient.where(recipe_id: params[:id])
     #debugger
   end
 
@@ -20,7 +21,6 @@ class RecipesController < ApplicationController
   end
 
   def create
-    #binding.pry
     @user = user
     Recipe.create(recipe_params)
     redirect_to(user_path(@user.id))

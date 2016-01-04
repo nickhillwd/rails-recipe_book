@@ -8,7 +8,10 @@
   <% end %>
 </div>
 
-<p> Ingredients: <%= @recipe.ingredients %> </p>
+<p> Ingredients: </p>
+<% @ingredients.each do |ingredient| %>
+<p> <%= ingredient.ingredient_name%> </p>
+<% end %>
 <p> Method: <%= @recipe.method %> </p>
 <% if @recipe.cooking_temp != nil %>
   <p>Cooking Temp: <%= @recipe.cooking_temp %> °C</p>
