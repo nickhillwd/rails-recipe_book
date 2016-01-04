@@ -39,17 +39,17 @@
 
 # Quantity.delete_all
 
-  # Quantity.create!(ingredient_id: 66,recipe_id: 27,amount: 100)
-  # Quantity.create!(ingredient_id: 67,recipe_id: 27,amount:100)
-  # Quantity.create!(ingredient_id: 68,recipe_id: 27,amount:100)
-  # Quantity.create!(ingredient_id: 69,recipe_id: 26,amount:100)
-  # Quantity.create!(ingredient_id: 70,recipe_id: 27,amount:100)
-  # Quantity.create!(ingredient_id: 71,recipe_id: 27,amount:100)
-  # Quantity.create!(ingredient_id: 72,recipe_id: 25,amount:100)
-  # Quantity.create!(ingredient_id: 73,recipe_id: 26,amount:100)
-  # Quantity.create!(ingredient_id: 74,recipe_id: 28,amount:100)
-  # Quantity.create!(ingredient_id: 75,recipe_id: 28,amount:100)
-  # Quantity.create!(ingredient_id: 76,recipe_id: 28,amount:100)
+#   Quantity.create!(ingredient_id: 66,recipe_id: 27,amount: 100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 67,recipe_id: 27,amount:100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 68,recipe_id: 27,amount:100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 69,recipe_id: 26,amount:100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 70,recipe_id: 27,amount:100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 71,recipe_id: 27,amount:100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 72,recipe_id: 25,amount:100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 73,recipe_id: 26,amount:100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 74,recipe_id: 28,amount:100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 75,recipe_id: 28,amount:100, unit: 'grams')
+#   Quantity.create!(ingredient_id: 76,recipe_id: 28,amount:100, unit: 'grams')
 
 # User.delete_all
 
