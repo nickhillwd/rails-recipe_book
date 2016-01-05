@@ -22,7 +22,11 @@ class RecipesController < ApplicationController
 
   def create
     @user = user
-    Recipe.create(recipe_params)
+    new_recipe = Recipe.new(recipe_params)
+    if new_recipe.picture == ""
+      new_recipe.update({picture: nil})
+    end
+    new_recipe.save
     redirect_to(user_path(@user.id))
   end
 
